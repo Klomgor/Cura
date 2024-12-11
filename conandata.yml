@@ -109,14 +109,10 @@ pyinstaller:
         - "serial"
         - "win32cred"
         - "win32timezone"
-        - "win32ctypes.core.ctypes"
-        - "win32ctypes.core.ctypes._common"
-        - "win32ctypes.core.ctypes._dll"
-        - "win32ctypes.core.ctypes._resource"
-        - "win32ctypes.core.ctypes._system_information"
-        - "win32ctypes.core.ctypes._time"
-        - "win32ctypes.core.ctypes._authentication"
         - "pkgutil"
+    hiddenimports_WINDOWS_ONLY:
+        - "PyQt6.Qt"
+        - "PyQt6.Qt6"
     collect_all:
         - "cura"
         - "UM"
@@ -129,6 +125,9 @@ pyinstaller:
         - "PyQt6.sip"
         - "stl"
         - "keyrings.alt"
+    collect_all_WINDOWS_ONLY:
+        - "PyQt6.Qt"
+        - "PyQt6.Qt6"
     icon:
         Windows: "./icons/Cura.ico"
         Macos: "./icons/cura.icns"
@@ -141,7 +140,7 @@ pyinstaller:
       - [ "qt", "lab", "animat" ]
       - [ "qt", "mqtt" ]
       - [ "qt", "net", "auth" ]
-      - [ "qt", "quick3d" ]
+      - [ "quick3d" ]
       - [ "qt", "timeline" ]
       - [ "qt", "virt", "key" ]
       - [ "qt", "wayland", "compos" ]
